@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LSS AAO Equipment Modus Umschalter
 // @namespace    www.leitstellenspiel.de
-// @version      1.0
+// @version      1.1
 // @description  Schaltet den Equipment-Modus der AAO zwischen Ein und Aus
 // @author       MissSobol
 // @match        https://www.leitstellenspiel.de/aaos
@@ -69,7 +69,7 @@
         // Erstelle den Button zum Ausschalten der automatischen Equipmentzuweisung
         const buttonOff = document.createElement('button');
         buttonOff.textContent = 'Automatische Equipmentzuweisung abschalten';
-        buttonOff.classList.add('btn', 'btn-danger');
+        buttonOff.classList.add('btn','btn-xs', 'btn-danger');
         buttonOff.style.marginRight = '10px';
         buttonOff.addEventListener('click', async () => {
             await toggleEquipmentMode(0); // Setze den Wert auf 0 (Aus)
@@ -78,7 +78,7 @@
         // Erstelle den Button zum Einschalten der automatischen Equipmentzuweisung
         const buttonOn = document.createElement('button');
         buttonOn.textContent = 'Automatische Equipmentzuweisung anschalten';
-        buttonOn.classList.add('btn', 'btn-success');
+        buttonOn.classList.add('btn','btn-xs', 'btn-success');
         buttonOn.addEventListener('click', async () => {
             await toggleEquipmentMode(1); // Setze den Wert auf 1 (Ein)
         });
